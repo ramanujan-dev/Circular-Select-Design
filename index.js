@@ -232,8 +232,9 @@ const drawLines = () => {
 $(document).ready(() => {
     var c = document.getElementById("myCanvas");
     ctx = c.getContext("2d");
-    c.width = window.innerHeight * 0.9;
-    c.height = window.innerHeight * 0.9;
+    let size = Math.min(window.innerHeight,window.innerWidth);
+    c.width = size * 0.9;
+    c.height = size * 0.9;
     c.onclick = canvasClick;
 
 
